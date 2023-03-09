@@ -11,16 +11,18 @@ import GoogleMaps
 struct ContentView: View {
     
     init() {
-        GMSServices.provideAPIKey("YOUR_API_KEY")
+        //Input your API key in here
+        GMSServices.provideAPIKey("xxx")
     }
     
     var body: some View {
         VStack {
             Text("MapView for iOS")
-                .font(.title)
+                .font(.title3)
             
             MapView()
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
@@ -34,8 +36,15 @@ struct MapView: UIViewRepresentable {
     typealias UIViewType = GMSMapView
     
     func makeUIView(context: Context) -> GMSMapView {
-        let camera = GMSCameraPosition(latitude: 16.560913, longitude: 107.495730, zoom: 10.0)
+        let camera = GMSCameraPosition(latitude: 16.4694664, longitude: 107.5781534, zoom: 15.0)
         let mapView = GMSMapView(frame: .zero, camera: camera)
+        
+        //Create a marker in the center of the map
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 16.4694664, longitude: 107.5781534)
+        marker.title = "Kinh Thanh Hue"
+        marker.snippet = "Hue City"
+        marker.map = mapView
         
         return mapView
     }
