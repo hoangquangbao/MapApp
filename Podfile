@@ -6,6 +6,6 @@ target 'MapApp' do
   use_frameworks!
 
   # Pods for MapApp
-  pod 'GoogleMaps', '7.3.0'
+  pod 'GoogleMaps'
 
 end

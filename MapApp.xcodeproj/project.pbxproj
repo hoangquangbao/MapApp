@@ -58,6 +58,7 @@
 		064E38E529A1E951001E5BBF /* MapApp */ = {
 			isa = PBXGroup;
 			children = (
+				0615569829B981B000518A94 /* Info.plist */,
 				064E38E629A1E951001E5BBF /* MapAppApp.swift */,
 				064E38E829A1E951001E5BBF /* ContentView.swift */,
 				064E38EA29A1E953001E5BBF /* Assets.xcassets */,
@@ -80,7 +81,6 @@
 				5B79614BC71D80FFF81975EE /* Pods-MapApp.debug.xcconfig */,
 				0F0AFA54DC28E6604F299442 /* Pods-MapApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -340,6 +340,7 @@
 				DEVELOPMENT_TEAM = 84ZVHZY7F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -370,6 +371,7 @@
 				DEVELOPMENT_TEAM = 84ZVHZY7F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MapApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

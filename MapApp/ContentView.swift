@@ -34,22 +34,35 @@ struct ContentView_Previews: PreviewProvider {
 
 struct MapView: UIViewRepresentable {
     typealias UIViewType = GMSMapView
-    
+
     func makeUIView(context: Context) -> GMSMapView {
-        let camera = GMSCameraPosition(latitude: 16.4694664, longitude: 107.5781534, zoom: 15.0)
-        let mapView = GMSMapView(frame: .zero, camera: camera)
+        let camera = GMSCameraPosition(
+            latitude: 16.4694664,
+            longitude: 107.5781534,
+            zoom: 15.0)
         
-        //Create a marker in the center of the map
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 16.4694664, longitude: 107.5781534)
-        marker.title = "Kinh Thanh Hue"
-        marker.snippet = "Hue City"
-        marker.map = mapView
+        let mapView = GMSMapView(frame: .zero, camera: camera)
         
         return mapView
     }
     
     func updateUIView(_ uiView: GMSMapView, context: Context) {
+        addMarker(mapView: uiView)
+    }
+    
+    func addMarker(mapView: GMSMapView) {
+        //Create a marker in the center of the map
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(
+            latitude: 16.4694664,
+            longitude: 107.5781534)
         
+        marker.title = "Kinh Thanh Hue"
+        marker.snippet = "Hue City"
+        marker.appearAnimation = .pop
+        marker.icon = GMSMarker.markerImage(with: .yellow)
+        marker.opacity = 0.6
+//        marker.icon = UIImage(named: "xxx")
+        marker.map = mapView
     }
 }
